@@ -42,6 +42,11 @@
         <version>3.8.1</version>
         <configuration>
         <release>11</release>
+         <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>application.Startup</mainClass>
+            </manifest>
         </configuration>
       </plugin>
     </plugins>
