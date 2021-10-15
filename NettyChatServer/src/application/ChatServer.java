@@ -1,3 +1,4 @@
+package application;
 import java.net.InetSocketAddress;
 
 import org.apache.logging.log4j.LogManager;
@@ -17,6 +18,27 @@ public class ChatServer
 	private ServerBootstrap mBootStrap;
 	final private static Logger mLogger = LogManager.getLogger(ChatServer.class);
 	private String mIP;
+	private boolean mIsListening;
+	
+	public int returnPort()
+	{
+		return mPort;
+	}
+	
+	public String returnIP()
+	{
+		return mIP;
+	}
+	
+	public ServerBootstrap returnBootStrap()
+	{
+		return mBootStrap;
+	}
+	
+	public boolean isListening()
+	{
+		return mIsListening;
+	}
 	
 	public ChatServer(String IP, int port)
 	{
@@ -47,10 +69,12 @@ public class ChatServer
 	        	 if (!objectFuture.isSuccess())
 	        	 {
 	        		 System.out.println("Failed to start server.");
+	        		 mIsListening = false;
 	        	 }
 	        	 else
 	        	 {
 	        		 System.out.println("Server listening on " + ip + ":" + port);
+	        		 mIsListening= true;
 	        	 }
 	         });
 	    	
