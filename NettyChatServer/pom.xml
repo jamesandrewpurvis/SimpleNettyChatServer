@@ -46,7 +46,7 @@
          <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>me.jamespurvis.application.Startup</mainClass>
+              <mainClass>me.jamespurvis.NettyChatServer.application.Startup</mainClass>
             </manifest>
             </archive>
         </configuration>
