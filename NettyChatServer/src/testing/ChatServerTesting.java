@@ -2,29 +2,29 @@ package testing;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import application.Startup;
 
-class ChatServerTesting {
+public class ChatServerTesting {
 
 	@Test
-	void testIP()
+	public void testIP()
 	{
 		assertNotEquals(Startup.returnInstance(), null);
 	}
 	
 	@Test
-	void TestPort()
+	public void TestPort()
 	{
 		assertNotEquals(Startup.returnInstance().returnPort(), 0);
 	}
 	
 	@Test
-	void TestBootStrap()
+	public void TestBootStrap()
 	{
 		assertNotEquals(Startup.returnInstance().returnBootStrap(), null);
-		assertNotEquals(Startup.returnInstance().returnBootStrap(), false);
+		assertNotEquals(Startup.returnInstance().isListening(), false);
 	}
 
 }

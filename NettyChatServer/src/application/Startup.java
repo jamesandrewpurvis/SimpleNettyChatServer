@@ -1,6 +1,9 @@
 package application;
 import java.util.Scanner;
 
+import org.junit.internal.TextListener;
+import org.junit.runner.JUnitCore;
+
 public class Startup {
 
 	private static ChatServer mInstance = null;
@@ -17,6 +20,12 @@ public class Startup {
 		System.out.println("Please enter a port: ");
 		int mPort = mScanner.nextInt();
 		mInstance = new ChatServer(mIP, mPort);
+		
+	
+		JUnitCore mTestInstance = new JUnitCore();
+		mTestInstance.addListener(new TextListener(System.out));
+		mTestInstance.run(testing.ChatServerTesting.class);
+		
 	}
 
 }
