@@ -3,7 +3,6 @@
   <groupId>me.jamespurvis</groupId>
   <artifactId>NettyChatServer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
       <dependencies>
   
   <dependency>
@@ -37,6 +36,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
+            <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
         </configuration>
       </plugin>
     </plugins>
