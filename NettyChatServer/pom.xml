@@ -44,10 +44,12 @@
         <configuration>
         <release>11</release>
          <archive>
+         <main>
             <manifest>
               <addClasspath>true</addClasspath>
               <mainClass>main.main</mainClass>
             </manifest>
+            </main>
             </archive>
         </configuration>
       </plugin>
