@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-import application.*;
+import application.ChatServer;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 
