@@ -35,24 +35,22 @@
   <name>SimpleNettyChatServer</name>
   <description>netty chat server using  the 4.x framework.</description>
   <build>
-    <sourceDirectory>src/main/java/</sourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        
-        <configuration>
-        <release>11</release>
-         <archive>
-         <main>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>main.main</mainClass>
-            </manifest>
-            </main>
-            </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <plugins>
+    <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>main</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 </project>
