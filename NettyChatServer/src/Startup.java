@@ -1,14 +1,13 @@
 
 import java.util.Scanner;
-import application.ChatServer;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 
 public class Startup {
 
-	private static ChatServer mInstance = null;
+	private static application.ChatServer mInstance = null;
 	
-	public static ChatServer returnInstance()
+	public static application.ChatServer returnInstance()
 	{
 		return mInstance;
 	}
@@ -19,7 +18,7 @@ public class Startup {
 		String mIP = mScanner.next();
 		System.out.println("Please enter a port: ");
 		int mPort = mScanner.nextInt();
-		mInstance = new ChatServer(mIP, mPort);
+		mInstance = new application.ChatServer(mIP, mPort);
 		
 	
 		JUnitCore mTestInstance = new JUnitCore();
