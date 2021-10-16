@@ -46,7 +46,7 @@
          <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>Startup</mainClass>
+              <mainClass>main.main</mainClass>
             </manifest>
             </archive>
         </configuration>
