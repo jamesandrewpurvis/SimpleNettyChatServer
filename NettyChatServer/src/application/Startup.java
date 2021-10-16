@@ -1,6 +1,6 @@
 package application;
-import java.util.Scanner;
 
+import java.util.Scanner;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 
@@ -13,13 +13,14 @@ public class Startup {
 		return mInstance;
 	}
 	
-	public static void main(String[] args) {
+	public static void Start()
+	{
 		Scanner mScanner = new Scanner(System.in);
 		System.out.println("Please enter a IP: ");
 		String mIP = mScanner.next();
 		System.out.println("Please enter a port: ");
 		int mPort = mScanner.nextInt();
-		mInstance = new ChatServer(mIP, mPort);
+		mInstance = new application.ChatServer(mIP, mPort);
 		
 	
 		JUnitCore mTestInstance = new JUnitCore();
