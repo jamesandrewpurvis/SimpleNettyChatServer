@@ -35,7 +35,7 @@
   <name>SimpleNettyChatServer</name>
   <description>netty chat server using  the 4.x framework.</description>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main/java/</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -46,7 +46,7 @@
          <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>main</mainClass>
+              <mainClass>main.main</mainClass>
             </manifest>
             </archive>
         </configuration>
