@@ -35,6 +35,7 @@
   <name>SimpleNettyChatServer</name>
   <description>netty chat server using  the 4.x framework.</description>
   <build>
+  <finalName>netty server project</finalName>
   <plugins>
     <plugin>
       <!-- Build an executable JAR -->
